@@ -1,0 +1,59 @@
+
+
+
+{% extends 'dummy.html' %}
+{% block title %}
+    <title>list</title>
+{% endblock %}
+
+{% block body_block %}
+
+
+<style>
+    body {
+        box-sizing: border-box;
+        
+
+
+    }
+    .card {
+        display: inline-block;
+        width: 300px;
+        margin-right: 10px;
+        
+    }
+
+    
+
+    .card-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+    }
+</style>
+
+
+<br><br>
+<center>
+                
+      {% for i in data %}
+    <div class="card" style="width: 300px;">
+        <img  src="{{i.images}}" class="card-img-top" alt="..." style="height: 200px; width:300px">
+        <div class="card-body">
+          <h5 class="card-title" ><a class="btn btn-primary" href="{{i.name}}">{{i.name}}</a></h5>
+          <p class="card-text">{{i.description}}</p>
+          
+        
+            </div>
+      </div>
+    
+      {% endfor %}
+
+      
+     
+
+    </center>
+{% endblock %}

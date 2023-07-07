@@ -1,0 +1,16 @@
+{% extends 'dummy.html' %}
+{% block title %}
+<title>Create page</title>
+{% endblock %}
+
+{% block body_block %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit">
+
+
+</form>
+
+{% endblock %}
